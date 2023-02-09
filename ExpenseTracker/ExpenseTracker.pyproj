@@ -1,0 +1,67 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>f729d0d1-b82e-46bb-9137-63731922a3a9</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>runserver.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ExpenseTracker</Name>
+    <RootNamespace>ExpenseTracker</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ExpenseTracker\db\db.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenseTracker\db\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenseTracker\encoder.py" />
+    <Compile Include="ExpenseTracker\models\base_model_.py" />
+    <Compile Include="ExpenseTracker\models\Expense.py" />
+    <Compile Include="ExpenseTracker\models\Permissions.py" />
+    <Compile Include="ExpenseTracker\models\User.py" />
+    <Compile Include="ExpenseTracker\models\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenseTracker\resources\Expenses.py" />
+    <Compile Include="ExpenseTracker\resources\Login.py" />
+    <Compile Include="ExpenseTracker\resources\Users.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenseTracker\resources\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExpenseTracker\util.py" />
+    <Compile Include="ExpenseTracker\__init__.py" />
+    <Compile Include="runserver.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ExpenseTracker\" />
+    <Folder Include="ExpenseTracker\models\" />
+    <Folder Include="ExpenseTracker\db\" />
+    <Folder Include="ExpenseTracker\resources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
